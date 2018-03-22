@@ -14,7 +14,8 @@ let _http = axios.create({
 })
 
 _http.interceptors.request.use(config => {
-    console.log(config)
+    // console.log(config)
+    // 请求拦截器可以配置不同接口的headers信息
     return config
 }, error => {
     return Promise.reject(error)
@@ -25,6 +26,7 @@ _http.interceptors.response.use(response => {
 }, error => {
     if (error.response) {
         console.log(error.response)
+        // 这里可以根据响应状态码,show对应的错误信息
     }
     return Promise.reject(error)
 })

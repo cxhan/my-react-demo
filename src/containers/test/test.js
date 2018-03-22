@@ -10,7 +10,7 @@ export default class Test extends Component {
     render() {
         return (
             <div className="Test">
-                testPage
+                LoginSuccess
             </div>
         )
     }

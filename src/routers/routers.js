@@ -8,7 +8,7 @@ import UnauthenticatedRoute from "../utils/UnauthenticatedRoute"
 import Home from '../containers/test/home'
 import NotFound from '../containers/common/NotFound'
 
-//code splitting routers
+// code splitting routers
 import testRouter from './testRouter'
 
 let allRouters = [...testRouter]

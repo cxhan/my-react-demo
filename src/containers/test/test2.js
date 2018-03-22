@@ -5,7 +5,9 @@ import { getLocation } from '../../service/index.api'
 export default class Test2 extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            locationInfo: ''
+        }
     }
 
     async getLocation() {
@@ -15,7 +17,10 @@ export default class Test2 extends Component {
         }
         try {
             let Result = await getLocation(params)
-            console.log(Result)
+            this.setState({
+                locationInfo: JSON.stringify(Result.data.result.ad_info)
+            })
+
         } catch (error) {
             console.log(error)
         }
@@ -28,7 +33,8 @@ export default class Test2 extends Component {
     render() {
         return (
             <div className="Test2">
-                <p>testPage2</p>
+                <p>NoNeedToLogin</p>
+                <p>{this.state.locationInfo}</p>
             </div>
         )
     }
