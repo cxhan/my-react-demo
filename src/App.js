@@ -11,7 +11,7 @@ import 'antd-mobile/dist/antd-mobile.css'
 
 class App extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     // 模拟登陆态，这里默认false，具体项目里请求接口或根据本地存储来判断
     this.state = {
